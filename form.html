@@ -1,18 +1,28 @@
 <html>
     <head>
-	    <!----www.coipoproducciones.cl--->
-	    <!----Coipo Producciones--------->
+        <!------Coipo Producciones---->
+        <!--www.coipoproducciones.cl-->
+        <script src="https://kit.coipomedia.com/librerias/scripts/jquery/jquery.js"></script>
          <script>
-			function setNombre() {
-				var miUrl = " https://tudominio.cl/categoria/" + document.getElementById('contenido').value;
-				window.open(miUrl);
-			}
-	</script>
+			function setDLCP() {
+				var dlCP = " https://midominio.cl/categoria/" + document.getElementById('idcontenido').value;
+				window.open(dlCP);
+            }
+            
+            $(document).ready(function() {
+            $('#irbtn').click(function() {
+            $('input[type="text"]').val('');
+  		});
+	    });
+		</script>
     </head> 
     <body>
-		<input class="idcp" id="contenido" type="text" name="idcp"><br>
-		<br>
+     <!--Input de la variable-->   
+		<input class="idcp" id="idcontenido" type="text" name="idcontenido"><br>
+        <br>
+    <!--Botón ir-->
 		<div class="div-btn">
-		<button class="btn-idcp" id="irbtn" type="button" onclick="setNombre()">Ir</button></div></br>
+        <button class="btn-idcp" id="irbtn" type="button" onclick="setDLCP()">Ir</button>
+        </div>
     </body>
 </html>
